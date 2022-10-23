@@ -109,7 +109,7 @@ redef SMB::statuses += {
 	[0x070a0001] = [$id="printeralreadyexists", $desc="The printer already exists."],
 	[0x070b0001] = [$id="invalidprintercommand", $desc="The printer command is invalid."],
 	[0x070c0001] = [$id="invaliddatatype", $desc="The specified datatype is invalid."],
-	[0x070d0001] = [$id="invalidenvironment", $desc="The Environment specified is invalid."],
+	[0x070d0001] = [$id="invalidatenvironment", $desc="The Environment specified is invalid."],
 	[0x084b0001] = [$id="buftoosmall", $desc="The API return buffer is too small."],
 	[0x085e0001] = [$id="unknownipc", $desc="The requested API is not supported on the remote server."],
 	[0x08670001] = [$id="nosuchprintjob", $desc="The print job does not exist."],

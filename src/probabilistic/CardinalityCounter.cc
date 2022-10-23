@@ -36,7 +36,7 @@ void CardinalityCounter::Init(uint64_t size)
 	m = size;
 
 	// The following magic values are taken directly out of the
-	// description of the HyperLogLog algorithn.
+	// description of the HyperLogLog algorithm.
 
 	if ( m == 16 )
 		alpha_m = 0.673;
@@ -141,7 +141,7 @@ void CardinalityCounter::AddElement(uint64_t hash)
 	}
 
 /**
- * Estimate the size by using the the "raw" HyperLogLog estimate. Then,
+ * Estimate the size by using the "raw" HyperLogLog estimate. Then,
  * check if it's too "large" or "small" because the raw estimate doesn't
  * do well in those cases.
  * Thus, we correct for those errors as specified in the paper.

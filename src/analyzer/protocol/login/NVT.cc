@@ -139,7 +139,7 @@ void TelnetTerminalOption::RecvSubOption(u_char* data, int len)
 	}
 
 #define ENCRYPT_SET_ALGORITHM 0
-#define ENCRYPT_SUPPORT_ALGORITM 1
+#define ENCRYPT_SUPPORT_ALGORITHM 1
 #define ENCRYPT_REPLY 2
 #define ENCRYPT_STARTING_TO_ENCRYPT 3
 #define ENCRYPT_NO_LONGER_ENCRYPTING 4
@@ -518,7 +518,7 @@ void NVT_Analyzer::DeliverChunk(int& len, const u_char*& data)
 				if ( last_char == '\r' )
 					{
 					if ( CRLFAsEOL() & CR_as_EOL )
-						// we already emited, skip
+						// we already emitted, skip
 						;
 					else
 						{

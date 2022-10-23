@@ -286,7 +286,7 @@ void TCP_Reassembler::MatchUndelivered(uint64_t up_to_seq, bool use_last_upper)
 
 	// ### Note: the original code did not check whether blocks have
 	// already been delivered, but not ACK'ed, and therefore still
-	// must be kept in the reassember.
+	// must be kept in the reassembler.
 
 	// We are to match any undelivered data, from last_reassem_seq to
 	// min(last_block->upper, up_to_seq).
@@ -546,10 +546,10 @@ void TCP_Reassembler::AckReceived(uint64_t seq)
 void TCP_Reassembler::CheckEOF()
 	{
 	// It is important that the check on whether we have pending data here
-	// is consistent with the check in TCP_Connection::ConnnectionClosed().
+	// is consistent with the check in TCP_Connection::ConnectionClosed().
 	//
 	// If we choose to call EndpointEOF here because, for example, we
-	// are already skipping deliveries, ConnnectionClosed() might decide
+	// are already skipping deliveries, ConnectionClosed() might decide
 	// that there is still DataPending, because it does not check
 	// SkipDeliveries(), and the connection will not be closed until
 	// timeout, since the did_EOF flag makes sure that EndpointEOF will
